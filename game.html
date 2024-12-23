@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Coin Game - TON Blockchain Airdrop</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f8ff;
+    }
+    .button {
+      padding: 20px 40px;
+      font-size: 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 50px;
+    }
+    .coin-amount {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Green Coin Game</h1>
+  <p>Click the button to earn green coins!</p>
+
+  <button class="button" onclick="earnCoin()">Earn Coin</button>
+  <div class="coin-amount">
+    Coins: <span id="coinCount">0</span>
+  </div>
+
+  <script>
+    let coinCount = 0;
+
+    function earnCoin() {
+      coinCount++;
+      document.getElementById('coinCount').textContent = coinCount;
+
+      if (coinCount >= 10) {
+        alert('You have earned 10 coins! Time for an airdrop!');
+        // Here you would integrate the airdrop functionality
+      }
+    }
+  </script>
+</body>
+</html>
